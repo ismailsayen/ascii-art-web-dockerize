@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="/assets/images/ascii.png"
+      type="image/x-icon"
+    />
+    <title>Home</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a class="logo" href="/">ASCII ART</a>
+        <ul>
+          <li>
+            Chakir
+            <div class="card chakir">
+              <div class="img"></div>
+              <div class="content">
+                <div class="info">
+                  <h3>Chakir Benlafkih</h3>
+                  <p>cbenlafk</p>
+                  <p>
+                    <span><i class="fa-solid fa-location-dot"></i></span
+                    >Morocco, Taza
+                  </p>
+                  <a href="https://github.com/chakirben" target="_blank">
+                    <button>
+                      <i class="fa-brands fa-github"></i>
+                      <p>Follow me</p>
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            Youssef
+            <div class="card youssef">
+              <div class="img"></div>
+              <div class="content">
+                <div class="info">
+                  <h3>Youssef El Asri</h3>
+                  <p>yelasri</p>
+                  <p>
+                    <span><i class="fa-solid fa-location-dot"></i></span
+                    >Morocco, Oujda
+                  </p>
+                  <a href="https://github.com/yelasri07" target="_blank">
+                    <button>
+                      <i class="fa-brands fa-github"></i>
+                      <p>Follow me</p>
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            Ismail
+            <div class="card ismail">
+              <div class="img"></div>
+              <div class="content">
+                <div class="info">
+                  <h3>Ismail Sayen</h3>
+                  <p>isayen</p>
+                  <p>
+                    <span><i class="fa-solid fa-location-dot"></i></span
+                    >Morocco, Tiznit
+                  </p>
+                  <a href="https://github.com/ismailsayen" target="_blank">
+                    <button>
+                      <i class="fa-brands fa-github"></i>
+                      <p>Follow me</p>
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section>
+      <form action="/ascii-art" method="post">
+        <textarea
+          required
+          placeholder="Type your sentence"
+          name="text"
+          id="text"
+          maxlength="200"
+        >{{if .Value}}{{.Value}}{{end}}</textarea>
+        <div class="banners">
+          {{if .Banner1}}
+          <div>
+            <input
+              checked
+              type="radio"
+              name="banner"
+              id="standard"
+              value="standard"
+              checked
+            />
+            <label for="standard">Standard</label>
+          </div>
+          {{end}}
+
+          {{if .Banner2}}
+          <div>
+            <input type="radio" name="banner" id="shadow" value="shadow" />
+            <label for="shadow">Shadow</label>
+          </div>
+          {{end}}
+
+          {{if .Banner3}}
+          <div>
+            <input
+              type="radio"
+              name="banner"
+              id="thinkertoy"
+              value="thinkertoy"
+            />
+            <label for="thinkertoy">Thinkertoy</label>
+          </div>
+          {{end}}
+        </div>
+        <div class="buttons">
+          <button type="submit">Generate Ascii</button>
+          <a href="/" >Clear</a>
+        </div>
+      </form>
+    </section>
+
+    {{if .Result}}
+    <div class="output">
+      <pre>{{.Result}}</pre>
+    </div>
+    {{end}}
+  </body>
+</html>

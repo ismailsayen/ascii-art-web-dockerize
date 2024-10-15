@@ -1,0 +1,321 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #f1f1f1a8;
+}
+
+header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px 0;
+
+  background-color: #fff;
+}
+
+nav {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  color: #000;
+  font-size: 2em;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+nav ul li {
+  list-style: none;
+  cursor: pointer;
+  font-size: 1.03em;
+  padding: 15px 0;
+  position: relative;
+}
+
+.card {
+  transition: 0.6s ease;
+  position: absolute;
+  opacity: 0;
+  width: 275px;
+  border-radius: 10px;
+  background-color: #fff;
+  z-index: 999;
+  box-shadow: 0px 8px 30px 0px #00000079;
+  position: absolute;
+  top: 100%;
+  right: 0%;
+  pointer-events: none;
+}
+
+nav ul li:hover > .card {
+  transition: 0.6s;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.card:hover {
+  opacity: 1;
+}
+
+.card .img {
+  width: 100%;
+  height: 220px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card.youssef .img {
+  background-image: linear-gradient(to bottom, #ffffff2d 40%, #fff),
+    url("../images/20241003_160304.jpg");
+}
+
+.card.ismail .img {
+  background-image: linear-gradient(to bottom, #ffffff2d 40%, #fff),
+    url("../images/149976248.jpeg");
+}
+
+.card.chakir .img {
+  background-image: linear-gradient(to bottom, #ffffff2d 40%, #fff),
+    url("../images/chakir.png");
+}
+
+.info {
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  line-height: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.info p {
+  font-weight: 200;
+}
+.info a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.info button {
+  font-size: 18px;
+  color: white;
+  background-color: #1a2b50;
+  border: none;
+  width: 70%;
+  border-radius: 15px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.fa-location-dot {
+  margin: 0 5px;
+}
+
+section {
+  margin-top: 80px;
+  text-align: center;
+  padding: 20px 0;
+}
+
+form {
+  max-width: 570px;
+  margin: auto;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  height: 130px;
+  margin: auto;
+  resize: none;
+  border: none;
+  outline: none;
+  box-shadow: 0px 8px 30px 0px #00000022;
+  border-radius: 16px;
+  font-size: 17.5px;
+  padding: 24px;
+}
+
+textarea::placeholder {
+  opacity: 0.6;
+}
+
+form .banners {
+  width: 100%;
+  margin: 30px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+form .banners div input {
+  display: none;
+}
+
+form .banners div label {
+  transition: 0.6s;
+  border: #000 solid 1px;
+  border-radius: 20px;
+  padding: 10px 40px;
+  cursor: pointer;
+}
+
+form .banners div input:checked + label {
+  background-color: #000;
+  color: #fff;
+  transition: 0.6s;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+.buttons > button {
+  background-color: #000;
+  border: none;
+  border-radius: 20px;
+  padding: 16.5px 0;
+  width: 70%;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.buttons a{
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 11.5px 0;
+  color: black;
+  width: 25%;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: ease-in-out .6s;
+  text-decoration: none;
+}
+.buttons a:hover{
+  background-color: #000000;
+  color: white;
+}
+.output {
+  text-align: center;
+  background-color: #ffffff;
+  max-height: 200px;
+  width: 90%;
+  margin: auto;
+  padding: 20px 40px;
+  border-radius: 15px;
+  margin-top: 60px;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+  border: 3px solid #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #f1f1f1;
+}
+
+@media (max-width:768px) {
+    nav{
+      justify-content: center;
+    }
+    nav ul{
+      display: none;
+    }
+}
+
+@media (max-width:468px){
+  form .banners{
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  form .banners div label{
+    border: #000 solid 1px;
+    border-radius: 20px;
+    padding: 10px 0;
+    cursor: pointer;
+    display: inline-block;
+    width: 50%;
+  }
+
+  textarea{
+    width: 90%;
+    font-size: 12.5px;
+  }
+  .buttons{
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    gap: 10px;
+  }
+  .buttons > button {
+    width: 100%;
+  }
+  .buttons a {
+    width: 100%;
+  }
+}
+
+@media (max-width:200px){
+  nav .logo{
+    font-size: 1em;
+  }
+  form .banners div label{
+    font-size: 0.7em;
+  }
+}
+
+@media (max-width:120px){
+  nav .logo{
+    font-size: 0.5em;
+  }
+  form .banners div label{
+    font-size: 0.4em;
+  }
+} 
